@@ -1,12 +1,16 @@
 import React from 'react';
+import { Route, Routes} from 'react-router-dom'
 
-import './App.css';
 import Home from './components/home';
+import LoginPage from './components/auth/login';
 
 function App() {
   return (
-    <div className="App">
-    <Home></Home>
+    <div >
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='login' element={<LoginPage/>}/>
+    </Routes>
     </div>
   );
 }
