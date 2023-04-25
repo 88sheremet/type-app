@@ -1,8 +1,8 @@
-import clsx from 'clsx';
-import { FC } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { useAuth } from '../../../modules/auth/hooks/use-auth';
-import { Container } from '../container/container.component';
+import clsx from "clsx";
+import { FC } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { useAuth } from "../../../modules/auth/hooks/use-auth";
+import { Container } from "../container/container.component";
 
 interface HeaderProps {}
 
@@ -10,9 +10,9 @@ export const Header: FC<HeaderProps> = () => {
   const { isLoggedIn, logOut, user } = useAuth();
 
   const navLinkClasses = ({ isActive }: { isActive: boolean }) =>
-    clsx('py-navItem hover:text-black/60 hover:no-underline', {
-      'text-black/30': !isActive,
-      'text-black/80': isActive,
+    clsx("py-navItem hover:text-black/60 hover:no-underline", {
+      "text-black/30": !isActive,
+      "text-black/80": isActive,
     });
 
   return (
